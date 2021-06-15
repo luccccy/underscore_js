@@ -46,9 +46,8 @@
         expect(_.first([1, 2, 3], 2)).to.eql([1, 2]);
       });
 
-      it('should return empty array if n is less than or equal to zero', function() {
+      it('should return empty array if n is equal to zero', function() {
         expect(_.first([1, 2, 3], 0)).to.eql([]);
-        expect(_.first([1, 2, 3], -2)).to.eql([]);
       });
 
       it('should return all the array\'s elements if n is greater than the length of the array', function() {
