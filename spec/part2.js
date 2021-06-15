@@ -73,7 +73,15 @@
       it('should return true given a object and a value from that object', function() {
         var object = { a: 1, b: 2, c: 3 };
         var value = 1;
-        expect(_.contains(object, value)).to.be.true;
+        expect(
+          _.contains(object, value),
+          [
+            '\n',
+            'Since this function uses _.reduce,',
+            'it appears that your _.reduce implementation is not properly handling objects!',
+            '\n'
+          ].join('\n')
+        ).to.be.true;
       });
 
       it('should return false given an object and a value not in that object', function() {

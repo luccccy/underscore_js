@@ -125,6 +125,7 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
+    // TIP: To support both arrays and objects, try re-using each() here
   };
 
 
